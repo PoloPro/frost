@@ -1,0 +1,5 @@
+<ul>
+<% @books.each do |book| %>
+  <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
+<% end %>
+</ul>
