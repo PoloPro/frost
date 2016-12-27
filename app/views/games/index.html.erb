@@ -1,5 +1,17 @@
+<h1>Games</h1>
+
 <ul>
-<% @games.each do |game| %>
-  <em><%= game.title %></em>, <%= game.author %>, read in <%= game.month_played %>
-<% end %>
+  <% @games.each do |game| %>
+    <li><em><%= game.title %></em>, played in <%= game.month_played %></li>
+  <% end %>
 </ul>
+
+<%= form_for Game.new do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %>
+
+  <%= f.label :month_played %>:
+  <%= f.text_field :month_played %>
+
+  <%= f.submit %>
+<% end %>

@@ -6,4 +6,14 @@ class GamesController < ApplicationController
       format.json { render json: @games }
     end
   end
+
+  def create
+    @game = Game.new(game_params)
+    @game.save
+    redirect_to games_path
+  end
+
+  private def game_params
+    params.require(:game).permit(:title, :month_played)
+  end
 end

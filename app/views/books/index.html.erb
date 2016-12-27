@@ -1,5 +1,20 @@
+<h1>Books</h1>
+
 <ul>
-<% @books.each do |book| %>
-  <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
-<% end %>
+  <% @books.each do |book| %>
+    <li><em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %></li>
+  <% end %>
 </ul>
+
+<%= form_for Book.new do |f| %>
+  <%= f.label :title %>:
+  <%= f.text_field :title %>
+
+  <%= f.label :author %>:
+  <%= f.text_field :author %>
+
+  <%= f.label :month_finished %>:
+  <%= f.text_field :month_finished %>
+
+  <%= f.submit %>
+<% end %>
