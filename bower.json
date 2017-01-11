@@ -1,0 +1,21 @@
+{
+  "name": "frost",
+  "homepage": "https://github.com/polopro/frost",
+  "authors": [
+    "PoloPro <wesleybdavis@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dragula.js": "dragula#^3.7.2"
+  }
+}

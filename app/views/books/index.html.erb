@@ -2,7 +2,7 @@
 
 <ul>
   <% @books.each do |book| %>
-    <li><em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %></li>
+  <li><em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %></li>
   <% end %>
 </ul>
 
@@ -18,3 +18,18 @@
 
   <%= f.submit %>
 <% end %>
+
+<hr>
+
+<div class="container">
+  <div id="left-books" class="container" style="float: left">
+    <div>Test</div>
+    <div>Another</div>
+  </div>
+  <div id="right-books" class="container" style="float: right">
+    <div>Right Test</div>
+    <div>Banana</div>
+  </div>
+</div>
+
+
