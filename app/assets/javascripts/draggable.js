@@ -1,3 +1,3 @@
 'use strict';
 
-dragula([document.getElementById('left-books'), document.getElementById('right-books')]);
+dragula([document.getElementById('left-drag-container'), document.getElementById('right-drag-container')]);
