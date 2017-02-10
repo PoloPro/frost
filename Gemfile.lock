@@ -145,7 +145,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  dragula-rails
+  dragula-rails (~> 3.7)
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.15)
