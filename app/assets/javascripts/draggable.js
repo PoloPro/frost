@@ -1,3 +1,7 @@
 'use strict';
 
-dragula([document.getElementById('left-drag-container'), document.getElementById('right-drag-container')]);
+dragula([document.getElementById('todo-box'),
+  document.getElementById('up-next-box'),
+  document.getElementById('done-box')]);
+
+
