@@ -15,3 +15,4 @@
 //= require turbolinks
 //= require dragula
 //= require_tree .
+//= require dragula
