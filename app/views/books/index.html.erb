@@ -18,7 +18,7 @@
 <div class="container">
   <div id="todo-box" class="drag-container col-xs-3">
     <% @books.each do |book| %>
-      <div class="item">
+      <div class="item" id="<%= book.title.parameterize %>">
         <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
       </div>
     <% end %>
@@ -36,5 +36,9 @@
   </div>
 </div>
 
+<% @books.each do |book| %>
+  <%= render partial: "shared/confirmation_modal", locals: 
+    { item_name: book.title, item_status: book.status } %>
+<% end %>
 
 
