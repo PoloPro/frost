@@ -17,7 +17,7 @@
 
 <div class="container">
   <div id="todo-box" class="drag-container col-xs-3">
-    <% @books.each do |book| %>
+    <% @books_todo.each do |book| %>
       <div class="item" id="<%= book.title.parameterize %>">
         <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
       </div>
@@ -25,20 +25,20 @@
   </div>
   <div class="col-xs-1"></div>
   <div id="up-next-box" class="drag-container col-xs-3">
-    <div class="item">Middle</div>
-    <div class="item">Boxes</div>
-    <div class="item">Yo</div>
+    <% @books_up_next.each do |book| %>
+      <div class="item" id="<%= book.title.parameterize %>">
+        <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
+      </div>
+    <% end %>
   </div>
   <div class="col-xs-1"></div>
   <div id="done-box" class="drag-container col-xs-3">
-    <div class="item">Right Test</div>
-    <div class="item">Banana</div>
+    <% @books_done.each do |book| %>
+      <div class="item" id="<%= book.title.parameterize %>">
+        <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
+      </div>
+    <% end %>
   </div>
 </div>
-
-<% @books.each do |book| %>
-  <%= render partial: "shared/confirmation_modal", locals: 
-    { item_name: book.title, item_status: book.status } %>
-<% end %>
 
 
