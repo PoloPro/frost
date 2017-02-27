@@ -16,4 +16,7 @@
  *= require_self
  */
 
-
+.vertical-align {
+  display: flex;
+  align-items: center;
+}

@@ -1,6 +1,6 @@
 div.drag-container {
   border-style: solid;
-  border-width: 2px;
+  border-width: 0px;
   border-color: black;
 
   padding: 0px;
@@ -16,19 +16,9 @@ div.drag-container > div.item {
 
   border-style: solid;
   border-width: 1px;
-  border-color: green;
+  border-color: gray;
 
   padding: 5px;
-}
 
-div#todo-box {
-
-}
-
-div#up-next-box {
-  
-}
-
-div#done-box {
-
+  margin-bottom: 5px;
 }
