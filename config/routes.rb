@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
   get  'books', to: 'books#index'
   post 'books', to: 'books#create'
-  put  'books/:id', to: 'books#update'
+  put  'books/:id/status', to: 'books#update_status'
 
   get  'games', to: 'games#index'
   post 'games', to: 'games#create'

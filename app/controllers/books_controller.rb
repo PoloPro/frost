@@ -15,8 +15,10 @@ class BooksController < ApplicationController
     redirect_to books_path
   end
 
-  def update
-
+  def update_status
+    book = Book.find(params[:id])
+    book.update!(status: params[:status].parameterize)
+    redirect_to books_path, status: 200
   end
 
   private
