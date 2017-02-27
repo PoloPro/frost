@@ -1,19 +1,28 @@
 class BooksController < ApplicationController
   def index
-    @books = Book.all
+    @books_todo    = Book.where({ status: 'todo' })
+    @books_up_next = Book.where({ status: 'up-next' })
+    @books_done    = Book.where({ status: 'done' })
+
     respond_to do |format|
       format.html # index.html.erb
-      format.json { render json: @books }
     end
   end
 
   def create
-    @book = Book.new(book_params)
+    @book = Book.new(book_params.merge(status: 'todo'))
     @book.save
     redirect_to books_path
   end
 
-  private def book_params
-    params.require(:book).permit(:title, :author, :month_finished)
+  def update_status
+    book = Book.find(params[:id])
+    book.update!(status: params[:status].parameterize)
+    redirect_to books_path, status: 200
+  end
+
+  private
+  def book_params
+    params.require(:book).permit(:title, :author, :month_finished, :status)
   end
 end

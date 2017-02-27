@@ -20,6 +20,7 @@ ActiveRecord::Schema.define(version: 20161226071926) do
     t.string   "title"
     t.string   "author"
     t.string   "month_finished"
+    t.string   "status"
     t.datetime "created_at",     null: false
     t.datetime "updated_at",     null: false
   end

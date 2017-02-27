@@ -17,24 +17,28 @@
 
 <div class="container">
   <div id="todo-box" class="drag-container col-xs-3">
-    <% @books.each do |book| %>
-      <div class="item">
+    <% @books_todo.each do |book| %>
+      <div class="item" db_id="<%= book.id %>" id="<%= book.title.parameterize %>">
         <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
       </div>
     <% end %>
   </div>
   <div class="col-xs-1"></div>
   <div id="up-next-box" class="drag-container col-xs-3">
-    <div class="item">Middle</div>
-    <div class="item">Boxes</div>
-    <div class="item">Yo</div>
+    <% @books_up_next.each do |book| %>
+      <div class="item" db_id="<%= book.id %>" id="<%= book.title.parameterize %>">
+        <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
+      </div>
+    <% end %>
   </div>
   <div class="col-xs-1"></div>
   <div id="done-box" class="drag-container col-xs-3">
-    <div class="item">Right Test</div>
-    <div class="item">Banana</div>
+    <% @books_done.each do |book| %>
+      <div class="item" db_id="<%= book.id %>" id="<%= book.title.parameterize %>">
+        <em><%= book.title %></em>, <%= book.author %>, read in <%= book.month_finished %>
+      </div>
+    <% end %>
   </div>
 </div>
-
 
 
